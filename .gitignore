@@ -1,3 +1,7 @@
+# Added by Zia
+.env.vercel
+
+# Added by Typebot
 node_modules
 .next
 .env.local
