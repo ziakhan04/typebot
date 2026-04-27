@@ -5,7 +5,9 @@ declare const global: { prisma: PrismaClient };
 
 if (!global.prisma) {
   global.prisma = new PrismaClient({
-    adapter: createPrismaAdapter(process.env.DATABASE_URL),
+    adapter: createPrismaAdapter(
+      process.env.DATABASE_POOLED_URL ?? process.env.DATABASE_URL
+    ),
   });
 }
 
